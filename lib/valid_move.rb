@@ -8,7 +8,7 @@ end
 def valid_move?(array, index)
   if index.between?(0, 8) && position_taken?(array, index) || index.between?(0, 8) && !position_taken?(array, index)
     return true
-  elsif index.between?(0, 8) && array[index] = "X" || "O"
+  elsif index.between?(0, 8) && !array[index] = " " || array[index] == ""
     return false
   end
 end
