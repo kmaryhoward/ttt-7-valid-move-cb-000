@@ -6,9 +6,5 @@ def position_taken?(array, index)
 end
 
 def valid_move?(array, index)
-  if index.between?(0, 8) && position_taken?(array, index) || index.between?(0, 8) && !position_taken?(array, index)
-    return true
-  elsif index.between?(0, 8) && !array[index] == " " || array[index] == ""
-    return false
-  end
+  index.between?(0, 8) && position_taken?(array, index) ?false : true
 end
